@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header/Header';
+import Content from './components/content/Content';
+
+
+function digital_root(n) {
+  if (n < 10){
+    return n;
+  }
+  let sum = n;
+  let temp = 0;
+  while (sum > 9) {
+    let numbers = sum.toString().split('');
+    for(let i = 0; i < numbers.length; i++){
+      temp += +(numbers[i]);
+    }
+    sum = temp;
+    temp = 0;
+  }
+  return sum;
+}
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Content />
+      {console.log(digital_root(456))}
     </div>
   );
 }

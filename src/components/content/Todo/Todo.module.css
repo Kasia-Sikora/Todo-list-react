@@ -1,0 +1,71 @@
+.todo {
+    display: flex;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.747);
+    align-items: center;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.534);
+  }
+  
+  .todo:last-child {
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 30px;
+    border-width: 0 1px 1px 1px;
+  }
+
+  .todo:nth-child(2) {
+    border-radius: 5px 5px 0 0;
+    border-width: 1px;
+  }
+  
+  .todo:nth-child(2n + 1) {
+    background-color: #8f8fb9de;
+  }
+  
+  .todo:nth-child(2n + 2) {
+    background-color: #5f5fafda;
+  }
+  
+  .todo.completed {
+    background-color: rgba(61, 63, 61, 0.897);
+    text-decoration: line-through;
+  }
+  
+  .todo.completed > .todoContent > .todoDuration,
+  .todo.completed > .todoContent > .todoText {
+    text-decoration: line-through;
+  }
+  
+  button {
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .buttons {
+    width: 130px;
+    margin-left: auto;
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  .btnTrash > svg,
+  .btnCheck > svg {
+    fill: rgb(0, 0, 0);
+  }
+  
+  .todoDuration {
+    width: 100px;
+    text-align: left;
+    flex-shrink: 0;
+  }
+  
+  .todoText {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+  }
+  

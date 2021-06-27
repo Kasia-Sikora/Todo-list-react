@@ -1,0 +1,15 @@
+.header{
+    color: rgba(0, 0, 0, 0.781);
+}
+
+h1{
+    margin: 10px;
+}
+
+.time{
+    font-size: 40px;
+}
+
+.date{
+    font-weight: bold;
+}
